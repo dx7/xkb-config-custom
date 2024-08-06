@@ -1,0 +1,32 @@
+// It works when only one keyboard layout is set: English (Machintosh)
+
+default partial xkb_symbols "superversions" {
+    key <AB01> {
+        type[group1]= "FOUR_LEVEL_SUPER",
+        type[group2]= "ALPHABETIC",
+        symbols[Group1]= [               z,               Z,     Greek_OMEGA,    dead_cedilla,                                                   NoSymbol ],
+        symbols[Group2]= [               z,               Z ],
+        actions[Group1]= [      NoAction(),      NoAction(),      NoAction(),      NoAction(),       RedirectKey(key=<LatZ>,mods=Control,clearmods=Super) ]
+    };
+    key <AB02> {
+        type[group1]= "FOUR_LEVEL_SUPER",
+        type[group2]= "ALPHABETIC",
+        symbols[Group1]= [               x,               X,        approxeq,     dead_ogonek,                                                   NoSymbol ],
+        symbols[Group2]= [               x,               X ],
+        actions[Group1]= [      NoAction(),      NoAction(),      NoAction(),      NoAction(),       RedirectKey(key=<LatX>,mods=Control,clearmods=Super) ]
+    };
+    key <AB03> {
+        type[group1]= "FOUR_LEVEL_SUPER",
+        type[group2]= "ALPHABETIC",
+        symbols[Group1]= [               c,               C,        ccedilla,        Ccedilla,                                                   NoSymbol ],
+        symbols[Group2]= [               c,               C ],
+        actions[Group1]= [      NoAction(),      NoAction(),      NoAction(),      NoAction(),       RedirectKey(key=<INS>,mods=Control,clearmods=Super) ]
+    };
+    key <AB04> {
+        type[group1]= "FOUR_LEVEL_SUPER",
+        type[group2]= "ALPHABETIC",
+        symbols[Group1]= [               v,               V,      squareroot,           U25CA,                                                   NoSymbol ],
+        symbols[Group2]= [               v,               V ],
+        actions[Group1]= [      NoAction(),      NoAction(),      NoAction(),      NoAction(),       RedirectKey(key=<INS>,mods=Shift,clearmods=Super) ]
+    };
+};
